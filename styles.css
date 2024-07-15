@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a; /* Dark grey background */
+    color: white;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+}
+
+.intro h1, .intro p, .intro button, .intro .social-icons {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.intro h1 {
+    animation-delay: 0.5s;
+}
+
+.intro p {
+    animation-delay: 1s;
+}
+
+.intro button {
+    animation-delay: 1.5s;
+}
+
+.intro .social-icons {
+    animation-delay: 2s;
+}
+
+.intro .highlight {
+    color: #00bcd4; /* Cyan/Sky Blue color */
+}
+
+.intro p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.typing {
+    border-right: 3px solid #00bcd4; /* Thicker Cyan/Sky Blue color */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret 0.75s step-end infinite;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    padding-right: 5px; /* Add space between job title and typing bar */
+}
+
+button {
+    background-color: transparent;
+    color: #00bcd4; /* Cyan/Sky Blue color */
+    border: 2px solid #00bcd4; /* Cyan/Sky Blue color */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #00bcd4; /* Cyan/Sky Blue color */
+    color: white;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons i {
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: transform 0.3s;
+    color: white; /* Set icon color to white */
+}
+
+.social-icons i:hover {
+    transform: scale(1.1);
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #00bcd4; /* Cyan/Sky Blue color */
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
